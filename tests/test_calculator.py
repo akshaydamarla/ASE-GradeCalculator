@@ -1,8 +1,11 @@
-"""Unit tests for the grade calculator."""
+import sys
+from pathlib import Path
 
 import pytest
 
-from calculator import calculate_average, calculate_grade
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from calculator import calculate_average, calculate_grade  # noqa: E402
 
 
 def test_calculate_average():
